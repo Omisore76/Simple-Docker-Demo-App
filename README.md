@@ -34,7 +34,7 @@ There are two ways to use this project – **Docker and Docker compose**
 
 * Start mongodb by running the command below
 
-`sudo docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --network mongo-network mongo`
+```sudo docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --network mongo-network mongo```
 
 * Start mongo-express. Run the command below to start it
 
@@ -49,6 +49,7 @@ There are two ways to use this project – **Docker and Docker compose**
 * Navigate to the app directory. While in the app directory, start the nodejs application. Run the following commands
 
 `npm install` 
+
 `node server.js`
 
 * Access the nodejs application user interface from the server
