@@ -29,41 +29,51 @@ There are two ways to use this project – **Docker and Docker compose**
 
 ### With Docker
 * First, create docker network. Use the command below in the CLI
+
 `sudo docker network create mongo-network`
 
 * Start mongodb by running the command below
+
 `sudo docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --network mongo-network mongo`
 
 * Start mongo-express. Run the command below to start it
+
 `sudo docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password --network mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodb -e ME_CONFIG_MONGODB_PORT=27017 mongo-express`
 
 * Open mongo-express from your browser. Enter the address below
+
 `http://localhost:8081`
 
 * Create a database and collection in mongo-express. The database must be named **`my-db`**, and the collection must be named **`users`**. The collection should be created in the “my-db” database.
 
 * Navigate to the app directory. While in the app directory, start the nodejs application. Run the following commands
+
 `npm install` 
 `node server.js`
 
 * Access the nodejs application user interface from the server
+
 `http://localhost:3000`
 
 ### With Docker Compose
 
 * Start mongodb and mongo-express. To do this, run the command:
+
 `docker-compose -f docker_compose_file.yaml up`
 
 * Open mongo-express from your browser. Enter the address below
+
 `http://localhost:8081`
 
 * Create a database and collection in mongo-express. The database must be named **`my-db`**, and the collection must be named **`users`**. The collection should be created in the “my-db” database
 
 * Navigate to the app directory. While in the app directory, start the nodejs application. Run the following commands
+
 `npm install` 
 `node server.js`
 
 * Access the nodejs application user interface from the server
+
 `http://localhost:3000`
 
 ## Build Docker Image from the Application
