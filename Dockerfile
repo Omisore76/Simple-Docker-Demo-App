@@ -5,6 +5,8 @@ ENV MONGO_DB_USERNAME=admin \
 
 RUN mkdir -p /home/app
 
+EXPOSE 3000
+
 WORKDIR /home/app
 
 COPY ./app /home/app
