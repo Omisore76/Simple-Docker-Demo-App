@@ -28,7 +28,7 @@ To use this repo, ensure you have the following set up on your local machine:
 There are two ways to use this project – **Docker and Docker compose**
 
 ### With Docker
-* First, create docker network. Use the command below in the CLI
+* First, create docker network. Use the command below in the CLI.
 ```
 sudo docker network create mongo-network
 ```
